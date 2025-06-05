@@ -21,14 +21,19 @@ def bubble_sort(runners):
     for i in range(n):
         for j in range(0, n-i-1):
             if runners[j]["time"] > runners[j+1]["time"]:
-                print(f'入れ替え: {runners[j]["name"]}({runners[j]["time"]}) ↔ {runners[j+1]["name"]}({runners[j+1]["time"]})')
+                # print(f'入れ替え: {runners[j]["name"]}({runners[j]["time"]}) ↔ {runners[j+1]["name"]}({runners[j+1]["time"]})')
                 runners[j], runners[j+1] = runners[j+1], runners[j]
     return runners
 
-print("=== 並び替え開始 ===")
+# print("=== 並び替え開始 ===")
 sorted_runners = bubble_sort(runners)
-print("=== 並び替え終了 ===\n")
+# print("=== 並び替え終了 ===\n")
 
 print("上位5名:")
 for i in range(5):
     print(f'{i+1}位: {sorted_runners[i]["name"]} - {sorted_runners[i]["time"]}秒')
+
+
+
+
+
